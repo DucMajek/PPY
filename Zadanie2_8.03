@@ -1,5 +1,5 @@
 #Michał Majek Duc 15c
-def print():
+def show():
     return "Dane użytkownika: \n" "Imie: " + imie \
            + "\nNazwisko: " + nazwisko + "\nWiek: " + wiek \
            + "\nWzrost: " + wzrost + "\nKolor oczu: " + kolorOczu \
@@ -26,5 +26,5 @@ kolorOczu = input()
 print("Kolor włosów")
 kolorWlosow = input()
 
-print(print())
+print(show())
 
