@@ -1,0 +1,30 @@
+#Michał Majek Duc 15c
+def add():
+    return "Dane użytkownika: \n" "Imie: " + imie \
+           + "\nNazwisko: " + nazwisko + "\nWiek: " + wiek \
+           + "\nWzrost: " + wzrost + "\nKolor oczu: " + kolorOczu \
+           + "\nKolor wlosów: " + kolorWlosow
+
+
+print("Podaj dane użytkownika: ")
+
+print("Imie: ")
+imie = input()
+
+print("Nazwisko")
+nazwisko = input()
+
+print("Wiek")
+wiek = input()
+
+print("Wzrost")
+wzrost = input()
+
+print("Kolor oczu")
+kolorOczu = input()
+
+print("Kolor włosów")
+kolorWlosow = input()
+
+print(add())
+
