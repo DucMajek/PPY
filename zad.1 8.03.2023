@@ -1,1 +1,42 @@
+#Michał Majek Duc 15c
+def dodawanie(x,y):
+    return x + y
+
+def odejmowanie(x,y):
+    return x - y
+
+def mnozenie(x,y):
+    return x * y
+
+def dzielenie (x,y):
+    return x / y
+
+print("Podaj liczbe")
+input1 = int(input())
+
+print("Podaj druga liczbe")
+input2 = int(input())
+
+print("Wybierz operator: ")
+print("1. +")
+print("2. -")
+print("3. *")
+print("4. /")
+
+operacja = int(input())
+
+if operacja == 1:
+    print(dodawanie(input1,input2))
+
+elif operacja == 2:
+    print(odejmowanie(input1,input2))
+
+elif operacja == 3:
+    print(mnozenie(input1, input2))
+
+elif operacja == 4:
+    print(dzielenie(input1,input2))
+
+else:
+    print("Niepoprawny operator")
 
