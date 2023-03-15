@@ -1,0 +1,21 @@
+# MIchał Majek s24655
+
+def konwersja(bin, okt, hex):
+    print("Liczba bin -> dziesietny " + str(int(bin, 2)))
+    print("Liczba okt -> dziesietny " + str(int(okt, 8)))
+    print("Liczba hex -> dziesietny " + str(int(hex, 16)))
+
+
+print("Podaj liczbe w systemie binarnym")
+
+liczba_bin = input()
+
+
+print("Podaj liczbe w systemie oktalnym")
+
+liczba_okt = input()
+
+print("Podaj liczbe w systemie szesnastkowym")
+
+liczba_hex = input()
+konwersja(liczba_bin, liczba_okt, liczba_hex)
