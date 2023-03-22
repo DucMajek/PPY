@@ -35,7 +35,7 @@ min = int(-20)
 max = int(20)
 list = []
 print("Pass 20 numbers from the range: -20 20")
-for n in range(6):
+for n in range(20):
     number = int(input())
     list.append(number)
 
