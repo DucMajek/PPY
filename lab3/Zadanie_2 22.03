@@ -1,0 +1,51 @@
+# Michał Majek Duc 15c
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def primes_tuple(lst):
+    primes = []
+    for num in lst:
+        if is_prime(num):
+            primes.append(num)
+    return tuple(primes)
+
+def modulo2(list):
+    modulo = []
+    for num in list:
+        if num % 2 == 0:
+            modulo.append(num)
+
+
+    return tuple(modulo)
+
+def replace(firstlist):
+
+    for i in range(len(list)):
+        if list[i] % 2 == 0:
+            list[i] = 'A'
+
+    return firstlist
+
+min = int(-20)
+max = int(20)
+list = []
+print("Pass 20 numbers from the range: -20 20")
+for n in range(6):
+    number = int(input())
+    list.append(number)
+
+listCopy = list
+print(primes_tuple(listCopy))
+print(modulo2(listCopy))
+print(replace(list))
+
+
+
+
+
+
