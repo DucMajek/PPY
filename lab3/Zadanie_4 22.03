@@ -1,0 +1,18 @@
+# Michał Majek Duc 15c
+
+def catalan_numbers(n):
+    if n == 0:
+        return 1
+    else:
+        return (4 * n - 2) * catalan_numbers(n - 1) // (n + 1)
+
+user_input = int(input("Podaj liczbę: "))
+
+print("Liczby Catalan mniejsze od", user_input, "to:")
+end = " "
+for i in range(user_input):
+    c = catalan_numbers(i)
+    if c < user_input:
+        print(c, end)
+    else:
+        break
