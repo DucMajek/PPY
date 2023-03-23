@@ -1,0 +1,33 @@
+# Michał Majek Duc 15c
+
+print("Size of multiplication table: ")
+size = int(input())
+number = int(1)
+number2 = int(2)
+number3 = int(3)
+number4 = int(4)
+number5 = int(5)
+if size == 1:
+    print(str(number) + " " + str(number2) + " " + str(number3) + " " + str(number4) + " " + str(number5))
+
+if size == 2:
+    print(str(number) + " " + str(number2) + " " + str(number3) + " " + str(number4) + "  " + str(number5))
+    print(str(number*size) + " " + str(number2*size) + " " + str(number3*size) + " " + str(number4*size) + " " + str(number5*size))
+
+if size == 3:
+    print(str(number) + " " + str(number2) + " " + str(number3) + "  " + str(number4) + "  " + str(number5))
+    print(str(number * 2) + " " + str(number2 * 2) + " " + str(number3 * 2) + "  " + str(number4 * 2) + " " + str(number5 * 2))
+    print(str(number * size) + " " + str(number2 * size) + " " + str(number3 * size) + " " + str(number4 * size) + " " + str(number5 * size))
+
+if size == 4:
+    print(str(number) + " " + str(number2) + "  " + str(number3) + "  " + str(number4) + "  " + str(number5))
+    print(str(number * 2) + " " + str(number2 * 2) + "  " + str(number3 * 2) + "  " + str(number4 * 2) + " " + str(number5 * 2))
+    print(str(number * 3) + " " + str(number2 * 3) + "  " + str(number3 * 3) + " " + str(number4 * 3) + " " + str(number5 * 3))
+    print(str(number * size) + " " + str(number2 * size) + " " + str(number3 * size) + " " + str(number4 * size) + " " + str(number5 * size))
+
+if size == 5:
+    print(str(number) + "  " + str(number2) + "  " + str(number3) + "  " + str(number4) + "  " + str(number5))
+    print(str(number * 2) + "  " + str(number2 * 2) + "  " + str(number3 * 2) + "  " + str(number4 * 2) + " " + str(number5 * 2))
+    print(str(number * 3) + "  " + str(number2 * 3) + "  " + str(number3 * 3) + " " + str(number4 * 3) + " " + str(number5 * 3))
+    print(str(number * 4) + "  " + str(number2 * 4) + " " + str(number3 * 4) + " " + str(number4 * 4) + " " + str(number5 * 4))
+    print(str(number * size) + " " + str(number2 * size) + " " + str(number3 * size) + " " + str(number4 * size) + " " + str(number5 * size))
