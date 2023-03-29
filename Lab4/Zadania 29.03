@@ -1,0 +1,48 @@
+# Michał Majek Duc 15c
+
+#Zad1
+for x in range(1, 21):
+    print(x, end='\t')
+
+print()
+
+#Zad2
+for x in range(5, 50, 5):
+    print(x, end='\t')
+
+print()
+
+#Zad3
+for x in range(100, 49, -1):
+    print(x, end='\t')
+
+print()
+
+#Zad4
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
+
+for x in range(x,y):
+    print(x, end='\t')
+    
+print()
+
+#Zad5
+z = int(input("Podaj z: "))
+while z <= 0:
+    print("Podaj liczbe dodatnia!")
+    z = int(input("Podaj z: "))
+
+print(z)
+
+#Zad6
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
+
+count = int(0)
+
+for x in range(x,y):
+    if x % 2 != 0:
+        count += x
+        
+print(count)
