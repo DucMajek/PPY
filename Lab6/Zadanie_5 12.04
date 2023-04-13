@@ -1,0 +1,75 @@
+# Michał Majek Duc s24655
+
+def add(list):
+ print("Podaj nowe dane produktu: ")
+
+ print("Numebr seryjny produktu: ")
+ number = int(input())
+
+ print("Nazwa produktu: ")
+ name = input()
+
+ print("Ilosc produktu w kg: ")
+ size = input()
+
+ print("Cena produktu: ")
+ price = float(input())
+
+ list.append([number, name, size + " kg", price])
+ print("Lista po dodaniu produktu: ")
+ print(list)
+
+
+def delete(list):
+    printList(list)
+    print("Który produkt chcesz usunąć podaj index: ")
+    index = int(input())
+    list.pop(index)
+    print("Po usunięciu produktu: ")
+    printList(list)
+
+def printList(list):
+    for row in list:
+        print(row)
+
+
+def modify(list):
+    printList(list)
+    print("Który produkt chcesz zmodyfikować (podaj index)?")
+    index = int(input())
+
+    print("Podaj nowe dane produktu:")
+    print("Nazwa produktu (aktualna wartość: {}):".format(list[index][1]))
+    name = input()
+
+    print("Ilość produktu w kg (aktualna wartość: {}):".format(list[index][2]))
+    size = input()
+
+    print("Cena produktu (aktualna wartość: {}):".format(list[index][3]))
+    price = float(input())
+
+    list[index][1] = name
+    list[index][2] = size + " kg"
+    list[index][3] = price
+
+    print("Lista po modyfikacji:")
+    printList(list)
+
+list = [[0, "Ziemniaki", "30 kg", 15], [1, "Makaron 30 kg", 10], [2, "Pomidory", "1 kg", 9]]
+
+
+print("1.ADD \n2.Delete \n3.Print \n4.Modify")
+
+option = int(input())
+
+if option == 1:
+    add(list)
+
+if option == 2:
+    delete(list)
+
+if option == 3:
+    printList(list)
+
+if option == 4:
+    modify(list)
