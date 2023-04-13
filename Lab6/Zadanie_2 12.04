@@ -1,0 +1,23 @@
+# Michał Majek Duc s24655
+
+def catalan_numbers(N, mode='a'):
+    catalan = [1]
+    for i in range(1, N + 1):
+        cn = 0
+        for j in range(i):
+            cn += catalan[j] * catalan[i - j - 1]
+        catalan.append(cn)
+
+    if mode == 'p':
+        catalan = [c for c in catalan if c % 2 == 0]
+    elif mode == 'n':
+        catalan = [c for c in catalan if c % 2 == 1]
+
+    return catalan
+
+
+print(catalan_numbers(10))
+
+print(catalan_numbers(50, 'p'))
+
+print(catalan_numbers(100, 'n'))
