@@ -1,0 +1,14 @@
+# Michał Majek Duc s24655
+
+def print_numbers(N, reverse=False):
+    i = lambda x: x % 2 == 0 and x % 3 != 0
+
+    numbers = [x for x in range(1, N * 10) if i(x)][:N]
+
+    numbers.sort(reverse=reverse)
+
+    for num in numbers:
+        print(num, end= " ")
+
+
+print_numbers(5, reverse=False)
