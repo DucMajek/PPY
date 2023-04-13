@@ -1,0 +1,22 @@
+# Michał Majek Duc s24655
+
+from math import isqrt
+
+def eratosthenes_sieve(n = 541):
+    if n <= 2:
+        return []
+    is_prime = [True] * (n + 1)
+    is_prime[0] = False
+    is_prime[1] = False
+
+    for i in range(2,isqrt(n)):
+        if is_prime[i]:
+            for x in range(i*i, n + 1, i):
+                is_prime[x] = False
+
+    return  [i for i in range(n + 1) if is_prime[i]]
+
+
+
+primes = eratosthenes_sieve()[:75]
+print(primes)
