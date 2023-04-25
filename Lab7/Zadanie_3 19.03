@@ -1,0 +1,55 @@
+# Michał Majek Duc 15c
+
+class Osoba:
+    def __init__(self, imie, nazwisko, plec, data_urodzenia):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.plec = plec
+        self.data_urodzenia = data_urodzenia
+
+    def wyswietl_info(self):
+        return {
+            "Imię": self.imie,
+            "Nazwisko": self.nazwisko,
+            "Płeć": self.plec,
+            "Data urodzenia": self.data_urodzenia
+        }
+
+        @staticmethod
+        def wyswietl_osoby(osoby):
+            return [osoba.wyswietl_info() for osoba in osoby]
+
+
+
+class Gracz (Osoba):
+    def __init__(self, imie, nazwisko, plec, data_urodzenia, nick, typ, email):
+        super().__init__(imie,nazwisko,plec,data_urodzenia)
+        self.nick = nick
+        self.typ = typ
+        self.email = email
+
+    def wyswietl_info(self):
+        info = super().wyswietl_info()
+        info["Nick"] = self.nick
+        info["Typ"] = self.typ
+        info["Email"] = self.email
+        return info
+
+    @staticmethod
+    def wyswietl_graczy(gracze):
+        return [gracz.wyswietl_info() for gracz in gracze]
+
+
+
+
+gracz1 = Gracz("Jan", "Kowalski", "M", "01-01-1990", "jankow", "Human", "jankow@example.com")
+gracz2 = Gracz("Anna", "Nowak", "K", "01-01-1995", "anow", "NPC", "anow@example.com")
+
+
+print(gracz1.wyswietl_info())
+
+
+
+gracze = [gracz1, gracz2]
+print(Gracz.wyswietl_graczy(gracze))
+
