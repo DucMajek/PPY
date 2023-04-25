@@ -1,0 +1,58 @@
+# Michał Majek Duc 15c
+class Product:
+    def __init__(self, name, price, category):
+        self.name = name
+        self.price = price
+        self.category = category
+
+    def __str__(self):
+        return f"{self.name} ({self.category}) - {self.price:.2f} zł"
+
+class GroceryStore:
+    def __init__(self):
+        self.products = []
+
+    def add_product(self, product):
+        self.products.append(product)
+
+    def remove_product(self, name):
+        for product in self.products:
+            if product.name == name:
+                self.products.remove(product)
+                return True
+        return False
+
+    def get_products_by_category(self, category):
+        result = []
+        for product in self.products:
+            if product.category == category:
+                result.append(product)
+        return result
+
+    def get_total_price(self):
+        total_price = 0
+        for product in self.products:
+            total_price += product.price
+        return total_price
+
+store = GroceryStore()
+
+
+store.add_product(Product("Banany", 4.50, "Owoce"))
+store.add_product(Product("Chleb", 3.20, "Pieczywo"))
+store.add_product(Product("Jogurt", 2.50, "Nabiał"))
+store.add_product(Product("Ser żółty", 7.80, "Nabiał"))
+store.add_product(Product("Kawa", 12.00, "Napoje"))
+store.add_product(Product("Piwo", 3.00, "Napoje"))
+
+
+store.remove_product("Jogurt")
+
+
+dairy_products = store.get_products_by_category("Nabiał")
+for product in dairy_products:
+    print(product)
+
+
+total_price = store.get_total_price()
+print(f"Total price: {total_price:.2f} zł")
