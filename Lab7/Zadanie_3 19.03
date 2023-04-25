@@ -23,7 +23,7 @@ class Osoba:
 
 class Gracz (Osoba):
     def __init__(self, imie, nazwisko, plec, data_urodzenia, nick, typ, email):
-        super().__init__(imie,nazwisko,plec,data_urodzenia)
+        super().__init__(imie, nazwisko, plec, data_urodzenia)
         self.nick = nick
         self.typ = typ
         self.email = email
