@@ -1,0 +1,45 @@
+# Michał Majek Duc 15c
+from heapq import heappop, heappush
+
+class Graph:
+    def __init__(self):
+        self.nodes = set()
+        self.edges = {}
+
+    def add_node(self, node):
+        self.nodes.add(node)
+        self.edges[node] = {}
+
+    def add_edge(self, node1, node2, weight):
+        self.edges[node1][node2] = weight
+        self.edges[node2][node1] = weight
+
+    def dijkstra(self, start):
+        distances = {node: float('inf') for node in self.nodes}
+        distances[start] = 0
+        queue = [(0, start)]
+        while queue:
+            current_distance, current_node = heappop(queue)
+            if current_distance > distances[current_node]:
+                continue
+            for neighbor, weight in self.edges[current_node].items():
+                distance = current_distance + weight
+                if distance < distances[neighbor]:
+                    distances[neighbor] = distance
+                    heappush(queue, (distance, neighbor))
+        return distances
+
+g = Graph()
+g.add_node('A')
+g.add_node('B')
+g.add_node('C')
+g.add_node('D')
+g.add_edge('A', 'B', 5)
+g.add_edge('A', 'C', 2)
+g.add_edge('B', 'C', 1)
+g.add_edge('B', 'D', 6)
+g.add_edge('C', 'D', 3)
+
+distances = g.dijkstra('A')
+for node in distances:
+    print(f"Distance from A to {node}: {distances[node]}")
