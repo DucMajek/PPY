@@ -1,0 +1,35 @@
+# Michał Majek Duc 15c
+
+import math
+
+def oblicz_pierwiastki(a, b, c):
+    delta = b**2 - 4*a*c
+
+    if delta > 0:
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        return x1, x2
+    elif delta == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        return None
+
+def formatuj_wynik(x):
+    if isinstance(x, tuple):
+        x1, x2 = x
+        return f'x1 = {x1:.2f}, x2 = {x2:.2f}'
+    elif isinstance(x, float):
+        return f'x = {x:.2f}'
+    else:
+        return 'Brak pierwiastków rzeczywistych.'
+
+
+a = 1
+b = -3
+c = 2
+
+wynik = oblicz_pierwiastki(a, b, c)
+wynik_sformatowany = formatuj_wynik(wynik)
+
+print(wynik_sformatowany)
