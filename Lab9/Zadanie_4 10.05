@@ -1,0 +1,19 @@
+# Michał Majek Duc 15c
+
+import os
+
+folder_path = "Pobrane"
+
+if not os.path.exists(folder_path):
+    print(f"Folder '{folder_path}' nie istnieje.")
+else:
+    content_list = os.listdir(folder_path)
+
+    for item in content_list:
+        item_path = os.path.join(folder_path, item)
+        if os.path.isfile(item_path):
+            print(f"{item} - plik")
+        elif os.path.isdir(item_path):
+            print(f"{item} - folder")
+        else:
+            print(f"{item} - nieznany typ")
