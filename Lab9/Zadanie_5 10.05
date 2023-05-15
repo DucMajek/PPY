@@ -1,0 +1,6 @@
+# Michał Majek Duc 15c
+
+from random import sample
+from string import ascii_letters
+
+five_letters = ''.join(sample(ascii_letters, 5))
