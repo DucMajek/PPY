@@ -1,0 +1,15 @@
+# Michał Majek Duc 15c
+
+def signum(x):
+    if x < 0:
+        return -1
+    elif x > 0:
+        return 1
+    else:
+        return 0
+
+
+x = float(input("Podaj liczbę rzeczywistą: "))
+wynik = signum(x)
+print(f"Wartość signum({x}) = {wynik}")
+
