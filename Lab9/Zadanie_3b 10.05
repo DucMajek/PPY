@@ -1,0 +1,43 @@
+# Michał Majek Duc 15c
+
+import Kalkulator
+
+def main():
+    while True:
+        print("Menu:")
+        print("1. Dodawanie")
+        print("2. Odejmowanie")
+        print("3. Mnożenie")
+        print("4. Dzielenie")
+        print("5. Wyjście")
+        
+        wybor = input("Wybierz opcję (1-5): ")
+        
+        if wybor == "1":
+            liczba1 = float(input("Podaj pierwszą liczbę: "))
+            liczba2 = float(input("Podaj drugą liczbę: "))
+            wynik = Kalkulator.dodawanie(liczba1, liczba2)
+            print("Wynik dodawania:", wynik)
+        elif wybor == "2":
+            liczba1 = float(input("Podaj pierwszą liczbę: "))
+            liczba2 = float(input("Podaj drugą liczbę: "))
+            wynik = Kalkulator.odejmowanie(liczba1, liczba2)
+            print("Wynik odejmowania:", wynik)
+        elif wybor == "3":
+            liczba1 = float(input("Podaj pierwszą liczbę: "))
+            liczba2 = float(input("Podaj drugą liczbę: "))
+            wynik = Kalkulator.mnozenie(liczba1, liczba2)
+            print("Wynik mnożenia:", wynik)
+        elif wybor == "4":
+            liczba1 = float(input("Podaj pierwszą liczbę: "))
+            liczba2 = float(input("Podaj drugą liczbę: "))
+            wynik = Kalkulator.dzielenie(liczba1, liczba2)
+            if wynik is not None:
+                print("Wynik dzielenia:", wynik)
+        elif wybor == "5":
+            break
+        else:
+            print("Błąd: Nieprawidłowa opcja. Wybierz ponownie.")
+
+if __name__ == "__main__":
+    main()
