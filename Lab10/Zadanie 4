@@ -1,0 +1,6 @@
+# Michał Majek Duc 15c
+
+from collections import Counter
+items = ['YES', 'NO', 'NO', 'YES', 'EMPTY', 'YES', 'NO']
+counter = Counter(items)
+print(counter)
