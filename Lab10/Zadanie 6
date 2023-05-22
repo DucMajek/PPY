@@ -1,0 +1,7 @@
+# Michał Majek Duc 15c
+
+import random
+random.seed(12)
+items = ["python", "java", "sql", "c++", "c"]
+random.shuffle(items)
+print(items)
