@@ -1,0 +1,7 @@
+# Michał Majek Duc 15c
+
+import re
+
+text = "Programowanie w języku Python – od A do Z"
+result = re.split(r'\s', text)
+print(result)
