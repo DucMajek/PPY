@@ -1,0 +1,7 @@
+# Michał Majek Duc 15c
+
+import string
+alphabet = list(string.ascii_lowercase)
+alphabet2 = list(string.ascii_uppercase)
+print(alphabet)
+print(alphabet2)
