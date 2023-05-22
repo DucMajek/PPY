@@ -1,0 +1,6 @@
+# Michał Majek Duc 15c
+
+import pickle
+ids = ["001", "003", "011"]
+with open('data.pickle', 'wb') as handle:
+    pickle.dump(ids, handle, protocol=pickle.HIGHEST_PROTOCOL)
